@@ -12,6 +12,7 @@ import './App.css';
 class App extends Component {
   state = {
     users: [],
+    user: {},
     loading: false,
     alert: null
   };
@@ -26,6 +27,17 @@ class App extends Component {
 
     this.setState({ users: res.data.items, loading: false});
   };
+
+  //Get single GitHub user
+  getUser = async (username) => {
+    this.setState({ loading: true });
+
+    const res = await axios.get(`https://api.github.com/users/${username}?&client_id=$
+    {process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=$
+    {process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+
+    this.setState({ user: res.data, loading: false});
+  }
 
   //Clear users from state
   clearUsers = () => this.setState({ users: [], loading: false})
@@ -65,7 +77,7 @@ class App extends Component {
                 </Fragment>
               )} />
               <Route exact path='/about'component={About} />
-              <Route exact path='/users/:login' render={props => (
+              <Route exact path='/user/:login' render={props => (
                 <User {...props } getUser={this.getUser} user={user} loading={loading} />
               )} />
            </Switch>
