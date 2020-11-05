@@ -4,7 +4,7 @@ React app to fetch GitHub user data with Axios API.
 
 Refactor from Class Components to functional with a Flux pattern, using the Context API with the useContext and useReducer hooks.
 
-![Screen Shot 2020-11-05 at 10 30 55](https://user-images.githubusercontent.com/38971399/98229633-0ebd5300-1f52-11eb-89f7-39d066cd0d47.png)
+![Screen Shot 2020-11-05 at 10 34 29](https://user-images.githubusercontent.com/38971399/98230001-88554100-1f52-11eb-92bc-575341ed2701.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
