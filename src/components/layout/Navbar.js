@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({ icon, title }) => {
     return (
-        <div>
+        <Fragment>
             <h1>
                 <i className={icon} /> {title}
             </h1>
@@ -18,7 +18,7 @@ const Navbar = ({ icon, title }) => {
                     <Link to='./about'>About</Link>
                 </li>
             </ul>
-        </div>
+        </Fragment>
     )
 }
 
