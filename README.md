@@ -1,3 +1,8 @@
+## GitHub Finder
+
+Refactor from Class Components to functional with a Flux pattern, using the Context API with the useContext and useReducer hooks.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
