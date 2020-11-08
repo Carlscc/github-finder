@@ -376,16 +376,22 @@ table th {
   margin-right: 0.6rem;
 }
 
+.userList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .hide-sm {
     display: none;
   }
 
-  .grid-2,
-  .grid-3,
-  .grid-4 {
+  .userList {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
   }
 
   /* Text Styles */
